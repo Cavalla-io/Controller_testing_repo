@@ -17,7 +17,7 @@ def generate_launch_description():
   gazebo_models_path = 'models'
   package_name = 'basic_mobile_robot'
   robot_name_in_model = 'forklift'
-  urdf_model_path = '/models/basic_mobile_bot_description/model.sdf'  
+  urdf_model_path = './models/basic_mobile_bot_description/model.sdf'  
   world_file_path = 'worlds/basic_mobile_bot_world/smalltown.world'
      
   # Pose where we want to spawn the robot
