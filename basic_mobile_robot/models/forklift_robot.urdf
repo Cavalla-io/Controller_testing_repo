@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<robot name="forklift">
+  <link name="base_footprint"/>
+  <!-- The base footprint of the robot is located underneath the chassis -->
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.19"/>
+  </joint>
+  <link name="base_link">
+    <origin xyz="-1.0795 -0.5334 0" rpy="0 0 0" />
+    <visual>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/base_link.dae"/> 
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 1.3716" rpy="0 0 0" />
+      <geometry>
+        <box size="2.159 1.0668 2.7432"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="500"/>
+      <inertia ixx="206" ixy="0" ixz="-23" iyy="389" iyz="0" izz="316"/>
+    </inertial>
+  </link>
+  
+  <link name="fork">
+    <origin xyz="1.0795 -0.368600 1" rpy="0 0 0" />
+    <visual>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/fork.dae"/> 
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/fork.dae"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="100"/>
+      <inertia ixx="0.2" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+
+  <link name="wheel_back_left">
+    <origin xyz="-0.9897 -0.5334 0" rpy="0 0 0" />
+    <visual>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.0015" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  
+  <link name="wheel_back_right">
+    <origin xyz="-0.9897 0.3302 0 " rpy="0 0 0" />
+    <visual>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.0015" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  
+  <link name="wheel_front_left">
+    <origin xyz="0.469 -0.5334 0" rpy="0 0 0" />
+    <visual>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.0015" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  
+  <link name="wheel_front_right">
+    <origin xyz="0.469 0.3302 0 " rpy="0 0 0" />
+    <visual>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.0015" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="base_to_fork" type="prismatic">
+    <parent link="base_link"/>
+    <child link="fork"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit 
+      lower="0" 
+      upper="2" 
+      velocity="0.1"
+      effort="100"
+    />
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="back_left_wheel_hinge" type="continuous">
+    <origin rpy="0 0 0" xyz="0 0. 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_back_left"/>
+    <limit 
+      velocity="10"
+      effort="1000"
+    />
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="back_right_wheel_hinge" type="continuous">
+    <origin rpy="0 0 0" xyz="0 0. 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_back_right"/>
+    
+    <limit 
+      velocity="10"
+      effort="1000"
+    />
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="left_wheel_hinge" type="continuous">
+    <origin rpy="0 0 0" xyz="0 0. 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_front_left"/>
+    <limit 
+      velocity="10"
+      effort="1000"
+    />
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="right_wheel_hinge" type="continuous">
+    <origin rpy="0 0 0" xyz="0 0. 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_front_right"/>
+    <limit 
+      velocity="10"
+      effort="1000"
+    />
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <sensor name="camera_sensor" update_rate="20">
+    <parent link="base_link"/>
+    <origin xyz="0 0 1.5" rpy="0 0 0" />
+    <camera>
+      <image width="640" height="480" hfov="1.5708" format="RGB8" near="0.01" far="50.0"/>
+    </camera>
+  </sensor>
+
+  <sensor name="ray_sensor" update_rate="20">
+   <parent link="basse_link"/>
+   <origin xyz="0 0 1.5" rpy="0 0 0"/>
+   <ray>
+     <horizontal samples="100" resolution="1" min_angle="-1.5708" max_angle="1.5708"/>
+     <vertical samples="1" resolution="1" min_angle="0" max_angle="0"/>
+   </ray>
+ </sensor>
+
+   <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    
+    <joint name="back_left_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="back_right_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="left_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="right_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+  </ros2_control>
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+</robot>
