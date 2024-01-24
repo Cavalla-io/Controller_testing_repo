@@ -1,3 +1,20 @@
-/install
-/log
-/build
+# Ignore build and install directories
+build/
+install/
+devel/
+
+# Ignore common file types generated during a build
+*.o
+*.cmake
+*.log
+*.make
+*.xacro~
+*~
+
+# Ignore IDE and temporary files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
