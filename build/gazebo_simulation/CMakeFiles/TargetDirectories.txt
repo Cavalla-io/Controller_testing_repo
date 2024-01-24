@@ -1,0 +1,9 @@
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/uninstall.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/gazebo_simulation_uninstall.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/test.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/edit_cache.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/rebuild_cache.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/list_install_components.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/install.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/install/local.dir
+/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation/CMakeFiles/install/strip.dir

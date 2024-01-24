@@ -1,0 +1,400 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="forklift">
+    <link name="base_link">
+      <pose>-1.0795 -0.5334 0 0 0 0</pose>
+      <visual name="base_link_visual">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/base_link.dae</uri> 
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="base_link_collision">
+        <pose>0 0 1.3716 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2.159 1.0668 2.7432</size>
+          </box>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>500</mass>
+        <inertia> 
+          <ixx>206</ixx> 
+          <ixy>0</ixy> 
+          <ixz>-23</ixz>
+          <iyy>389</iyy> 
+          <iyz>0</iyz> 
+          <izz>316</izz>
+        </inertia>
+      </inertial>
+        <sensor name='imu_sensor' type='imu'>
+        <plugin name='imu_plugin' filename='libgazebo_ros_imu_sensor.so'>
+          <initial_orientation_as_reference>0</initial_orientation_as_reference>
+        </plugin>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <visualize>1</visualize>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.0002</stddev>
+                <bias_mean>7.5e-06</bias_mean>
+                <bias_stddev>8e-07</bias_stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.0002</stddev>
+                <bias_mean>7.5e-06</bias_mean>
+                <bias_stddev>8e-07</bias_stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.0002</stddev>
+                <bias_mean>7.5e-06</bias_mean>
+                <bias_stddev>8e-07</bias_stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.017</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.017</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.017</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+        <pose>0 0 0.01 0 -0 0</pose>
+      </sensor>
+    </link>
+  
+    <link name="fork">
+      <pose>1.0795 -0.368600 1 0 0 0</pose>
+      <visual name="fork_visual">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/fork.dae</uri> 
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="fork_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/fork.dae</uri> 
+          </mesh>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>100</mass>
+        <inertia> 
+          <ixx>0.2</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>0.3</iyy> 
+          <iyz>0</iyz> 
+          <izz>0.4</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="wheel_back_left">
+      <pose>-0.9897 -0.5334 0 0 0 0</pose>
+      <visual name="wheel_back_left">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="wheel_back_left_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>5</mass>
+        <inertia> 
+          <ixx>0.001</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>0.0015</iyy> 
+          <iyz>0</iyz> 
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="wheel_back_right">
+      <pose>-0.9897 0.3302 0 0 0 0</pose>
+      <visual name="wheel_back_right">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="wheel_back_right_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>5</mass>
+        <inertia> 
+          <ixx>0.001</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>0.0015</iyy> 
+          <iyz>0</iyz> 
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="wheel_front_left">
+      <pose>0.469 -0.5334 0 0 0 0</pose>
+      <visual name="wheel_front_left">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="wheel_front_left_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <inertial>
+          <mass>5</mass>
+          <inertia> 
+            <ixx>0.001</ixx> 
+            <ixy>0</ixy> 
+            <ixz>0</ixz>
+            <iyy>0.0015</iyy> 
+            <iyz>0</iyz> 
+            <izz>0.001</izz>
+          </inertia>
+        </inertial>
+    </link>
+
+    <link name="wheel_front_right">
+      <pose>0.469 0.3302 0 0 0</pose>
+      <visual name="wheel_front_right">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="wheel_front_right_collision">
+        <geometry>
+          <mesh>
+            <uri>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/meshes/wheel.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>5</mass>
+        <inertia> 
+          <ixx>0.001</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>0.0015</iyy> 
+          <iyz>0</iyz> 
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <joint name="base_to_fork" type="prismatic">
+      <parent>base_link</parent>
+      <child>fork</child>
+      <limit> 
+        <lower>0</lower> 
+        <upper>2</upper> 
+        <velocity>0.1</velocity>
+      </limit> 
+      <axis> 
+        <initial_position>0.2</initial_position>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+
+    <joint name="back_left_wheel_hinge" type="revolute">
+      <pose relative_to='wheel_back_left'>0 0. -0. 0 0 -</pose>
+      <parent>base_link</parent>
+      <child>wheel_back_left</child>
+        <limit>
+          <effort>1.5</effort>
+          <velocity>20</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.005</damping>
+          <friction>0.02</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="back_right_wheel_hinge" type="revolute">
+      <pose relative_to='wheel_back_right'>0 0. -0. 0 0 -</pose>
+      <parent>base_link</parent>
+      <child>wheel_back_right</child>
+        <limit>
+          <effort>1.5</effort>
+          <velocity>20</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.005</damping>
+          <friction>0.02</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="left_wheel_hinge" type="revolute">
+      <pose relative_to='wheel_front_left'>0 0. -0. 0 0 -</pose>
+      <parent>base_link</parent>
+      <child>wheel_front_left</child>
+        <limit>
+          <effort>1.5</effort>
+          <velocity>20</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.005</damping>
+          <friction>0.02</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="right_wheel_hinge" type="revolute">
+      <pose relative_to='wheel_front_right'>0 0. -0. 0 0 -</pose>
+      <parent>base_link</parent>
+      <child>wheel_front_right</child>
+        <limit>
+          <effort>1.5</effort>
+          <velocity>20</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.005</damping>
+          <friction>0.02</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+
+    <plugin name="four_ws_robot_joint_state" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+          <remapping>~/out:=joint_states</remapping>
+      </ros>
+      <update_rate>10</update_rate>
+      <joint_name>back_left_wheel_hinge</joint_name>
+      <joint_name>back_right_wheel_hinge</joint_name>
+      <joint_name>left_wheel_hinge</joint_name>
+      <joint_name>right_wheel_hinge</joint_name>
+    </plugin>
+
+<ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    
+    <joint name="back_left_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="back_right_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="left_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="right_wheel_hinge">
+      <command_interface name="velocity">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+  </ros2_control>
+
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>/home/rshah/Documents/Personal_Repos/dev_ws/src/basic_mobile_robot/config/controllers.yaml</parameters>
+    </plugin>
+  </model>
+</sdf>
