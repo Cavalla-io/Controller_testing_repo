@@ -1,0 +1,29 @@
+[0.166s] Invoking command in '/home/victor/Documents/Controller_testing_repo/build/four_ws_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/victor/Documents/Controller_testing_repo/build/four_ws_control -- -j12 -l12
+[0.200s] Invoked command in '/home/victor/Documents/Controller_testing_repo/build/four_ws_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/victor/Documents/Controller_testing_repo/build/four_ws_control -- -j12 -l12
+[0.229s] Invoking command in '/home/victor/Documents/Controller_testing_repo/build/four_ws_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/victor/Documents/Controller_testing_repo/build/four_ws_control
+[0.246s] -- Install configuration: ""
+[0.246s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control//scripts
+[0.246s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control//scripts/robot_pub.py
+[0.247s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control//scripts/robot_control.py
+[0.247s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control//launch
+[0.247s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control//launch/four_ws_pub.launch.py
+[0.247s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control//launch/four_ws_control.launch.py
+[0.248s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/lib/four_ws_control/robot_control.py
+[0.248s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/lib/four_ws_control/robot_pub.py
+[0.248s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/lib/four_ws_control/four_ws_control.launch.py
+[0.249s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/ament_index/resource_index/package_run_dependencies/four_ws_control
+[0.249s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/ament_index/resource_index/parent_prefix_path/four_ws_control
+[0.249s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/environment/ament_prefix_path.sh
+[0.250s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/environment/ament_prefix_path.dsv
+[0.250s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/environment/path.sh
+[0.250s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/environment/path.dsv
+[0.250s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/local_setup.bash
+[0.250s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/local_setup.sh
+[0.251s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/local_setup.zsh
+[0.251s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/local_setup.dsv
+[0.251s] -- Installing: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/package.dsv
+[0.252s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/ament_index/resource_index/packages/four_ws_control
+[0.252s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/cmake/four_ws_controlConfig.cmake
+[0.252s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/cmake/four_ws_controlConfig-version.cmake
+[0.253s] -- Up-to-date: /home/victor/Documents/Controller_testing_repo/install/four_ws_control/share/four_ws_control/package.xml
+[0.378s] Invoked command in '/home/victor/Documents/Controller_testing_repo/build/four_ws_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/victor/Documents/Controller_testing_repo/build/four_ws_control

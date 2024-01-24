@@ -1,0 +1,1 @@
+Invoking command in '/home/victor/Documents/Controller_testing_repo/build/gazebo_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/victor/Documents/Controller_testing_repo/gazebo_simulation -DCMAKE_INSTALL_PREFIX=/home/victor/Documents/Controller_testing_repo/install/gazebo_simulation
