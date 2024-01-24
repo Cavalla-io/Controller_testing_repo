@@ -9,5 +9,5 @@ This will show you how to launch the basic mobile robot to learn how the control
 1. run `ros2 launch gazebo_simulation robot_sim.launch.py` in the terminal
 2. in a new terminal run `ros2 launch four_ws_control four_ws_control.launch.py`
 3. in another terminal run `ros2 launch four_ws_control four_ws_pub.launch.py`
-
-
+   
+**Make sure to run `source install/setup.bash` in every new terminal you set up**
